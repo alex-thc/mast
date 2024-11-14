@@ -97,9 +97,9 @@ func split(ctx context.Context, node *mastNode, key interface{}, mast *Mast) (le
 	var tooBigLink interface{} = nil
 	left := mastNode{
 		Node{
-			make([]interface{}, 0, cap(node.Key)),
-			make([]interface{}, 0, cap(node.Value)),
-			make([]interface{}, 0, cap(node.Link)),
+			make([]interface{}, 0),
+			make([]interface{}, 0),
+			make([]interface{}, 0),
 		},
 		true, false, nil, nil,
 	}
@@ -135,9 +135,9 @@ func split(ctx context.Context, node *mastNode, key interface{}, mast *Mast) (le
 	}
 	right := mastNode{
 		Node{
-			make([]interface{}, 0, cap(node.Key)),
-			make([]interface{}, 0, cap(node.Value)),
-			make([]interface{}, 0, cap(node.Link)),
+			make([]interface{}, 0),
+			make([]interface{}, 0),
+			make([]interface{}, 0),
 		},
 		true, false, nil, nil,
 	}
